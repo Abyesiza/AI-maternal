@@ -20,7 +20,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.joelaby.maternity"
     },
     "web": {
       "bundler": "metro",
@@ -28,10 +29,22 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-notifications",
+      "expo-secure-store"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "clerkPublishableKey": "process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY",
+      "convexUrl": "process.env.EXPO_PUBLIC_CONVEX_URL",
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "1631c091-4e8c-4793-a4f2-fa441c61a991"
+      }
     }
   }
 }
